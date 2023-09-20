@@ -18,22 +18,26 @@ int solution(const vector<int>& gain) {
 
     cout << "idx: " << idx << endl;
     cout << "altitude: " << altitude << endl;
-    cout << "max_altitude" << max_altitude << endl;
+    cout << "max_altitude: " << max_altitude << endl << endl;
 
     for (int i : gain) {
         idx += 1;
         altitude += i;
-        max_altitude = max(altitude, altitude);
+        max_altitude = max(altitude, max_altitude);
         cout << "idx: " << idx << endl;
         cout << "altitude: " << altitude << endl;
-        cout << "max_altitude: " << max_altitude << endl;
+        cout << "max_altitude: " << max_altitude << endl << endl;
     }
 
     return max_altitude;
 }
 
 int main() {
-    vector<int> gain = {1, 2, -3, 4};
-    cout << solution(gain) << endl;
+    vector<vector<int>> gain = { {1, 2, -3, 4}, {0, -4, -3, -2, -1, 4, 3, 2} };
+    for (vector<int> i : gain) {
+        int result = solution(i);
+        cout << "RESULT: " << result << endl << endl;
+    }
+
     return 0;
 }

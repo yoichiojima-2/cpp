@@ -13,7 +13,7 @@ int main() {
 
     cout << "country tax: " << country_tax_to_pay << endl;
     cout << "state_tax: " << state_tax_to_pay << endl;
-    cout << "income: " << income;
+    cout << "income: " << income << endl;
 
     return 0;
 }

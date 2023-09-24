@@ -34,6 +34,7 @@ class Transactions:
     def get_total_amount_by_person(self, person):
         return sum(i.amount for i in self.transactions if i.person == person)
 
+
 def main():
     yoichi = Person(name = "yoichi")
     tuuri = Person(name = "tuuri")
